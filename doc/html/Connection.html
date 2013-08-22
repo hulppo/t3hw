@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  Connection</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">Connection</A></H2></H2><BLOCKQUOTE>Class Connection.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=155>
+<param name=classes value="CConnection,MConnection.html,CSimpleBotConnection,MSimpleBotConnection.html,CRandomBotConnection,MRandomBotConnection.html,CMathBotConnection,MMathBotConnection.html,CCLConnection,MCLConnection.html">
+<param name=before value="M,M|_,MR_,MR_,Mr_">
+<param name=after value="M,M,M,M,M">
+<param name=indent value="0,0,0,0,0">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.6.1">Connection</A></B>(long connId, std::string userName, <!1><A HREF="Server.html">Server</A>* serv)
+<DD><I>Constructor.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   <B><A HREF="#DOC.6.2">~Connection</A></B>()
+<DD><I>Destructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void <B><A HREF="#DOC.6.3">sendMsg</A></B>(<!1><A HREF="Message.html">Message</A>* msg)
+<DD><I>Sends Message* to user.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void <B><A HREF="#DOC.6.4">sendMsg</A></B>(<!1><A HREF="PrivateMessage.html">PrivateMessage</A>* pMsg)
+<DD><I>Sends PrivateMessage* to user.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void <B><A HREF="#DOC.6.5">sendMsg</A></B>(<!1><A HREF="ChannelMessage.html">ChannelMessage</A>* cMsg)
+<DD><I>Sends ChannelMessage* to user.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void* <B><A HREF="#DOC.6.6">Execute</A></B>()
+<DD><I>Thread start</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>long <B><A HREF="#DOC.6.7">getId</A></B>()
+<DD><I>Returns the connection id</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Fields</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>std::string <B><A HREF="#DOC.6.8">mUserName</A></B>
+<DD><I>a protected member variable, holding the name of the user</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="Server.html">Server</A>* <B><A HREF="#DOC.6.9">pServer</A></B>
+<DD><I>a protected pointer to server, needed for processing incomming msgs</I>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Class Connection.
+This is an abstract class from where a real connection
+should inherit. The inheriting connection specifies fully
+if it is a command-line, TCP/IP or a dummy connection.
+Connection uses a pointer to the Server class. Connection is started
+by ConnectionHandler as a thread.</BLOCKQUOTE>
+<DL>
+
+<A NAME="Connection"></A>
+<A NAME="DOC.6.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Connection(long connId, std::string userName, <!1><A HREF="Server.html">Server</A>* serv)</B></TT>
+<DD>Constructor.
+This is the constructor for Connection, every inheriting class should
+call the constructor of this class before making their own initializations.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>connId</B> -  Identification of type long. 
+Should be unique for every <!1><A HREF="Connection.html#DOC.6.1">Connection</A> object.
+<BR><B>userName</B> -  Name of the user, type std::string
+<BR><B>serv</B> -  Pointer to the <!1><A HREF="Server.html">Server</A>, type <!1><A HREF="Server.html">Server</A>*<BR><DD></DL><P>
+<A NAME="~Connection"></A>
+<A NAME="DOC.6.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~Connection()</B></TT>
+<DD>Destructor
+<DL><DT><DD></DL><P>
+<A NAME="sendMsg"></A>
+<A NAME="DOC.6.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void sendMsg(<!1><A HREF="Message.html">Message</A>* msg)</B></TT>
+<DD>Sends Message* to user.
+Used for outgoing messages. This method gets called when there is a message
+to send to the user of this connection. It should be overwritten in the
+inheriting class.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>msg</B> -  Type <!1><A HREF="Message.html">Message</A>*<BR><DD></DL><P>
+<A NAME="sendMsg"></A>
+<A NAME="DOC.6.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void sendMsg(<!1><A HREF="PrivateMessage.html">PrivateMessage</A>* pMsg)</B></TT>
+<DD>Sends PrivateMessage* to user.
+Used for outgoing messages. Should implement the sending of a
+private message. Can be overwritten in the inheriting class,
+otherwise calls sendMsg(Message*).
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>pMsg</B> -  Type <!1><A HREF="PrivateMessage.html">PrivateMessage</A>*
+<BR><DD></DL><P>
+<A NAME="sendMsg"></A>
+<A NAME="DOC.6.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void sendMsg(<!1><A HREF="ChannelMessage.html">ChannelMessage</A>* cMsg)</B></TT>
+<DD>Sends ChannelMessage* to user.
+Used for outgoing messages. Should implement the sending of a 
+channel message. Can be overwritten in the inheriting class
+otherwise calls sendMsg(Message*).
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>cMsg</B> -  Type <!1><A HREF="ChannelMessage.html">ChannelMessage</A>*<BR><DD></DL><P>
+<A NAME="Execute"></A>
+<A NAME="DOC.6.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void* Execute()</B></TT>
+<DD>Thread start
+<DL><DT><DD></DL><P>
+<A NAME="getId"></A>
+<A NAME="DOC.6.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>long getId()</B></TT>
+<DD>Returns the connection id
+<DL><DT><DD></DL><P>
+<A NAME="mUserName"></A>
+<A NAME="DOC.6.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>std::string mUserName</B></TT>
+<DD>a protected member variable, holding the name of the user
+<DL><DT><DD></DL><P>
+<A NAME="pServer"></A>
+<A NAME="DOC.6.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Server.html">Server</A>* pServer</B></TT>
+<DD>a protected pointer to server, needed for processing incomming msgs
+<DL><DT><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="SimpleBotConnection.html">SimpleBotConnection</A><BR>
+<A HREF="RandomBotConnection.html">RandomBotConnection</A><BR>
+<A HREF="MathBotConnection.html">MathBotConnection</A><BR>
+<A HREF="CLConnection.html">CLConnection</A><BR>
+</DL>
+
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

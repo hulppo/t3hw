@@ -1,0 +1,9 @@
+
+interface ClientAdapter {
+  void sendPrivateMessage(in string sender, in string text);
+  void sendChannelMessage(in string sender, in string channel, in string text);
+  void sendMessage(in string sender, in string text);
+
+  void sendError(in string errDescription);
+
+};

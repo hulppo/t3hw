@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  SimpleBotConnection</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">SimpleBotConnection</A></H2></H2><BLOCKQUOTE>Class SimpleBotConnection.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="CConnection,MConnection.html,CSimpleBotConnection,MSimpleBotConnection.html">
+<param name=before value="M,M">
+<param name=after value="Md_,M">
+<param name=indent value="0,1">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.15.1">SimpleBotConnection</A></B>(long connId, std::string uName, <!1><A HREF="Server.html">Server</A>* serv, std::string pword)
+<DD><I>Constructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.15.2">sendMsg</A></B>(<!1><A HREF="Message.html">Message</A>* msg)
+<DD><I> </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.15.3">sendMsg</A></B>(<!1><A HREF="PrivateMessage.html">PrivateMessage</A>* msg)
+<DD><I> </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.15.4">sendMsg</A></B>(<!1><A HREF="ChannelMessage.html">ChannelMessage</A>* msg)
+<DD><I> </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void* <B><A HREF="#DOC.15.5">Execute</A></B>()
+<DD><I> </I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="Connection.html">Connection</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>long <B>getId</B>()
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Fields</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>std::string <B>mUserName</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="Server.html">Server</A>* <B>pServer</B>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Class SimpleBotConnection. This connection simulates a very simple
+person. Changed the semaphore usage to pthread_cond because semaphore
+isn't implemented on computers in Niksula.</BLOCKQUOTE>
+<DL>
+
+<A NAME="SimpleBotConnection"></A>
+<A NAME="DOC.15.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> SimpleBotConnection(long connId, std::string uName, <!1><A HREF="Server.html">Server</A>* serv, std::string pword)</B></TT>
+<DD>Constructor
+<DL><DT><DD></DL><P>
+<A NAME="sendMsg"></A>
+<A NAME="DOC.15.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void sendMsg(<!1><A HREF="Message.html">Message</A>* msg)</B></TT>
+<DD>
+
+<DL><DT><DT><B>See Also:</B><DD><!1><A HREF="Connection.html">Connection</A><BR><DD></DL><P>
+<A NAME="sendMsg"></A>
+<A NAME="DOC.15.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void sendMsg(<!1><A HREF="PrivateMessage.html">PrivateMessage</A>* msg)</B></TT>
+<DD>
+
+<DL><DT><DT><B>See Also:</B><DD><!1><A HREF="Connection.html">Connection</A><BR><DD></DL><P>
+<A NAME="sendMsg"></A>
+<A NAME="DOC.15.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void sendMsg(<!1><A HREF="ChannelMessage.html">ChannelMessage</A>* msg)</B></TT>
+<DD>
+
+<DL><DT><DT><B>See Also:</B><DD><!1><A HREF="Connection.html">Connection</A><BR><DD></DL><P>
+<A NAME="Execute"></A>
+<A NAME="DOC.15.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void* Execute()</B></TT>
+<DD>
+
+<DL><DT><DT><B>See Also:</B><DD><!1><A HREF="Connection.html">Connection</A><BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

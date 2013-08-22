@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  Server</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">Server</A></H2></H2><BLOCKQUOTE>Class Server This is the central class, it keeps record of the active users and channels.</BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.14.1">Server</A></B>(int chLimit)
+<DD><I>Constructor.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.14.2">~Server</A></B>()
+<DD><I>Destructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.14.3">joinServer</A></B>(std::string uName, std::string pass, <!1><A HREF="Connection.html">Connection</A>* conn)
+<DD><I>User joins server.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.14.4">exitServer</A></B>(std::string uName)
+<DD><I>User exits server.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.14.5">joinChannel</A></B>(std::string uName, std::string chName)
+<DD><I>User joins a channel Gets called when a user wants to join a channel.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.14.6">exitChannel</A></B>(std::string uName, std::string chName)
+<DD><I>User exits channel Gets called when a user wants to exit a channel.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.14.7">sendChannelList</A></B>(std::string uName)
+<DD><I>Sends channel list Sends a list of channels as a string to the user.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.14.8">recvMsg</A></B>(<!1><A HREF="ChannelMessage.html">ChannelMessage</A>* msg)
+<DD><I>Receives ChannelMessages.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.14.9">recvMsg</A></B>(<!1><A HREF="PrivateMessage.html">PrivateMessage</A>* msg)
+<DD><I>Receives PrivateMessages.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.14.10">recvCmd</A></B>(<!1><A HREF="ServerCommand.html">ServerCommand</A>* cmd)
+<DD><I>Receival of ServerCommands.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.14.11">recvCmd</A></B>(<!1><A HREF="ChannelCommand.html">ChannelCommand</A>* cmd)
+<DD><I>Receival of ChannelCommands.</I>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Class Server
+This is the central class, it keeps record of the active users
+and channels. It also works as a gateway for sending messages.</BLOCKQUOTE>
+<DL>
+
+<A NAME="Server"></A>
+<A NAME="DOC.14.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Server(int chLimit)</B></TT>
+<DD>Constructor.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>chLimit</B> -  Max number of channels on server.<BR><DD></DL><P>
+<A NAME="~Server"></A>
+<A NAME="DOC.14.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ~Server()</B></TT>
+<DD>Destructor
+<DL><DT><DD></DL><P>
+<A NAME="joinServer"></A>
+<A NAME="DOC.14.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool joinServer(std::string uName, std::string pass, <!1><A HREF="Connection.html">Connection</A>* conn)</B></TT>
+<DD>User joins server.
+This function gets called when a user wants to join this server. Authenticates
+the user by querying the database.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>uName</B> -  Name of the user
+<BR><B>pass</B> -  Password for user
+<BR><B>conn</B> -  The users connection object, used for sending messages
+back to the user.<BR><DT><B>Returns:</B><DD>  bool Was the join successful
+<BR><DD></DL><P>
+<A NAME="exitServer"></A>
+<A NAME="DOC.14.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool exitServer(std::string uName)</B></TT>
+<DD>User exits server.
+This method gets called when a user wants to exit the server.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>uName</B> -  Name of the user<BR><DT><B>Returns:</B><DD>  boolean was the exit successful
+<BR><DD></DL><P>
+<A NAME="joinChannel"></A>
+<A NAME="DOC.14.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool joinChannel(std::string uName, std::string chName)</B></TT>
+<DD>User joins a channel
+Gets called when a user wants to join a channel. Adds the user to
+the Channel specified. If the join fails then it returns false.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>uName</B> -  Name of the user
+<BR><B>chName</B> -  <!1><A HREF="Channel.html">Channel</A> to join<BR><DT><B>Returns:</B><DD>  boolean was the channel join successful
+<BR><DD></DL><P>
+<A NAME="exitChannel"></A>
+<A NAME="DOC.14.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool exitChannel(std::string uName, std::string chName)</B></TT>
+<DD>User exits channel
+Gets called when a user wants to exit a channel. Removes the
+user from the channel.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>uName</B> -  Name of the user
+<BR><B>chName</B> -  <!1><A HREF="Channel.html">Channel</A> to exit<BR><DT><B>Returns:</B><DD>  boolean was the channel exit successful
+<BR><DD></DL><P>
+<A NAME="sendChannelList"></A>
+<A NAME="DOC.14.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool sendChannelList(std::string uName)</B></TT>
+<DD>Sends channel list
+Sends a list of channels as a string to the user.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>std</B> - ::string UserName to send to<BR><DT><B>Returns:</B><DD>  boolean Send successful
+<BR><DD></DL><P>
+<A NAME="recvMsg"></A>
+<A NAME="DOC.14.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void recvMsg(<!1><A HREF="ChannelMessage.html">ChannelMessage</A>* msg)</B></TT>
+<DD>Receives ChannelMessages. The message is
+checked for which channel it is meant and sent there.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>msg</B> -  <!1><A HREF="ChannelMessage.html">ChannelMessage</A><BR><DD></DL><P>
+<A NAME="recvMsg"></A>
+<A NAME="DOC.14.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool recvMsg(<!1><A HREF="PrivateMessage.html">PrivateMessage</A>* msg)</B></TT>
+<DD>Receives PrivateMessages. A check is performed whether the
+user is active, otherwise the message is sent to UserDataBase.
+
+<DL><DT><DT><B>Returns:</B><DD>  boolean was the processing successful, i.e. did the user
+exist<BR><DD></DL><P>
+<A NAME="recvCmd"></A>
+<A NAME="DOC.14.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool recvCmd(<!1><A HREF="ServerCommand.html">ServerCommand</A>* cmd)</B></TT>
+<DD>Receival of ServerCommands. They get processed.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>cmd</B> -  <!1><A HREF="ServerCommand.html">ServerCommand</A><BR><DT><B>Returns:</B><DD>  boolean Was the command recognized
+<BR><DD></DL><P>
+<A NAME="recvCmd"></A>
+<A NAME="DOC.14.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool recvCmd(<!1><A HREF="ChannelCommand.html">ChannelCommand</A>* cmd)</B></TT>
+<DD>Receival of ChannelCommands. They get processed. Some commands
+might be delegated to channels.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>cmd</B> -  <!1><A HREF="ChannelCommand.html">ChannelCommand</A><BR><DT><B>Returns:</B><DD>  boolean Was the command recognized
+<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

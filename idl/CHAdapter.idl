@@ -1,0 +1,4 @@
+interface CHAdapter {
+  // Returns string_ref to connection object
+  string registerUser(in string userName, in string password, in string client);
+};

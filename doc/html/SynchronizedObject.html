@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  SynchronizedObject</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">SynchronizedObject</A></H2></H2><BLOCKQUOTE>Class SynchronizedObject.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="CSynchronizedObject,MSynchronizedObject.html,CUser,MUser.html,CChannel,MChannel.html">
+<param name=before value="M,M|_,Mr_">
+<param name=after value="M,M,M">
+<param name=indent value="0,0,0">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.17.1">SynchronizedObject</A></B>()
+<DD><I>Constructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.17.2">setMapId</A></B>(long id)
+<DD><I>Setter.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>long <B><A HREF="#DOC.17.3">getMapId</A></B>()
+<DD><I>Getter.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.17.4">incReference</A></B>()
+<DD><I>Increaser.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.17.5">decReference</A></B>()
+<DD><I>Decreaser.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.17.6">getReferenceCount</A></B>()
+<DD><I>ReferenceCount.</I>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Class SynchronizedObject.
+A class which is going to be used together with the synchronized
+map has to inherit this class.</BLOCKQUOTE>
+<DL>
+
+<A NAME="SynchronizedObject"></A>
+<A NAME="DOC.17.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> SynchronizedObject()</B></TT>
+<DD>Constructor
+<DL><DT><DD></DL><P>
+<A NAME="setMapId"></A>
+<A NAME="DOC.17.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setMapId(long id)</B></TT>
+<DD>Setter. Sets the id.
+The mapId has to be unique per synchronized map.
+It is used in garbage collecting.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>long</B> - <BR><DD></DL><P>
+<A NAME="getMapId"></A>
+<A NAME="DOC.17.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>long getMapId()</B></TT>
+<DD>Getter.
+
+<DL><DT><DT><B>Returns:</B><DD>  long<BR><DD></DL><P>
+<A NAME="incReference"></A>
+<A NAME="DOC.17.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void incReference()</B></TT>
+<DD>Increaser. Increases one to the reference count.
+<DL><DT><DD></DL><P>
+<A NAME="decReference"></A>
+<A NAME="DOC.17.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void decReference()</B></TT>
+<DD>Decreaser. Decreases one from reference.
+<DL><DT><DD></DL><P>
+<A NAME="getReferenceCount"></A>
+<A NAME="DOC.17.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int getReferenceCount()</B></TT>
+<DD>ReferenceCount. Returns the number of references for this
+object.
+
+<DL><DT><DT><B>Returns:</B><DD>  int<BR><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="User.html">User</A><BR>
+<A HREF="Channel.html">Channel</A><BR>
+</DL>
+
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

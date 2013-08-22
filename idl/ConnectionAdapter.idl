@@ -1,0 +1,26 @@
+interface ConnectionAdapter {
+  void exitServer();
+  boolean joinChannel(in string chName);
+  boolean exitChannel(in string chName);
+
+
+  // Sending of messages
+  void sendChannelMsg(in string chName, in string text);
+  void sendPrivateMsg(in string receiverName, in string text);
+
+  // Information calls
+  void getServerInfo();
+
+  void getUserInfo();
+  void getChannelInfo();
+  
+  
+  // Admin calls
+  void createUser(in string uName, in string pass, in string rName, in boolean isAdmin);
+  void removeUser(in string targetUser);
+  void createChannel(in string chName);
+  void destroyChannel(in string chName);
+  void kickUserFromServer(in string targetUser);
+  void kickUserFromChannel(in string targetUser, in string chName);
+
+};

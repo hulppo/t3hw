@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  User</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">User</A></H2></H2><BLOCKQUOTE>Class User.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="CSynchronizedObject,MSynchronizedObject.html,CUser,MUser.html">
+<param name=before value="M,M">
+<param name=after value="Md_,M">
+<param name=indent value="0,1">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.18.1">User</A></B>(std::string userName, std::string realName, std::string password, bool <!1><A HREF="User.html#DOC.18.7">isAdmin</A>)
+<DD><I>Constructor, creates a new user object </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.18.2">setConnection</A></B>(<!1><A HREF="Connection.html">Connection</A>* connection)
+<DD><I>Connects a user to a given connection.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.18.3">sendMsg</A></B>(<!1><A HREF="Message.html">Message</A>* message)
+<DD><I>Sends a message to the connection.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.18.4">sendMsg</A></B>(<!1><A HREF="ChannelMessage.html">ChannelMessage</A>* chMessage)
+<DD><I>Sends a channel message to the connection.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.18.5">sendMsg</A></B>(<!1><A HREF="PrivateMessage.html">PrivateMessage</A>* prMessage)
+<DD><I>Sends a private message to the connection.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>const std::string&amp; <B><A HREF="#DOC.18.6">getUserName</A></B>()
+<DD><I>Tells the name of this user.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.18.7">isAdmin</A></B>()
+<DD><I>Tells if this user is administrator.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>std::string <B><A HREF="#DOC.18.8">getInfo</A></B>()
+<DD><I>Returns a string containing information about this user.</I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="SynchronizedObject.html">SynchronizedObject</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>setMapId</B>(long id)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>long <B>getMapId</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>incReference</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>decReference</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>int <B>getReferenceCount</B>()
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Class User.
+Contains personal information about user and
+the connection to which it is connected.
+Is also used to send messages to the connection.</BLOCKQUOTE>
+<DL>
+
+<A NAME="User"></A>
+<A NAME="DOC.18.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> User(std::string userName, std::string realName, std::string password, bool <!1><A HREF="User.html#DOC.18.7">isAdmin</A>)</B></TT>
+<DD>Constructor, creates a new user object
+
+<DL><DT><DT><B>Parameters:</B><DD><B>userName</B> -  <!1><A HREF="User.html#DOC.18.1">User</A> name to give for this user.
+<BR><B>realName</B> -  Realname of this user.
+<BR><B>password</B> -  Password to give for this user.
+<BR><B></B> - <!1><A HREF="User.html#DOC.18.7">isAdmin</A> Is this user admin.<BR><DD></DL><P>
+<A NAME="setConnection"></A>
+<A NAME="DOC.18.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setConnection(<!1><A HREF="Connection.html">Connection</A>* connection)</B></TT>
+<DD>Connects a user to a given connection.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>conn</B> -  <!1><A HREF="Connection.html">Connection</A> to which user is connected.<BR><DD></DL><P>
+<A NAME="sendMsg"></A>
+<A NAME="DOC.18.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void sendMsg(<!1><A HREF="Message.html">Message</A>* message)</B></TT>
+<DD>Sends a message to the connection.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>message</B> -  <!1><A HREF="Message.html">Message</A> to send.<BR><DD></DL><P>
+<A NAME="sendMsg"></A>
+<A NAME="DOC.18.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void sendMsg(<!1><A HREF="ChannelMessage.html">ChannelMessage</A>* chMessage)</B></TT>
+<DD>Sends a channel message to the connection.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>chMessage</B> -  <!1><A HREF="Channel.html">Channel</A> message to send.<BR><DD></DL><P>
+<A NAME="sendMsg"></A>
+<A NAME="DOC.18.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void sendMsg(<!1><A HREF="PrivateMessage.html">PrivateMessage</A>* prMessage)</B></TT>
+<DD>Sends a private message to the connection.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>priMessage</B> -  Private message to send.<BR><DD></DL><P>
+<A NAME="getUserName"></A>
+<A NAME="DOC.18.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const std::string&amp; getUserName()</B></TT>
+<DD>Tells the name of this user.
+
+<DL><DT><DT><B>Returns:</B><DD>  const string Username of this user.<BR><DD></DL><P>
+<A NAME="isAdmin"></A>
+<A NAME="DOC.18.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isAdmin()</B></TT>
+<DD>Tells if this user is administrator.
+
+<DL><DT><DT><B>Returns:</B><DD>  boolean Returns boolean true if this user
+is administrator.<BR><DD></DL><P>
+<A NAME="getInfo"></A>
+<A NAME="DOC.18.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>std::string getInfo()</B></TT>
+<DD>Returns a string containing information about this user.
+
+<DL><DT><DT><B>Returns:</B><DD>  string Username, realname and user type of
+this user.<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

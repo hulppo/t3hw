@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  Database</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">Database</A></H2></H2><BLOCKQUOTE>Class Database This class accesses the file "databasedat", which contains all the information from every user registered for  this ChatServer.</BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.8.1">Database</A></B>()
+<DD><I>Constructor, creater a new Database object that reads and modifies file "databasedat"</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.8.2">checkUser</A></B>(std::string userName, std::string userPasswd)
+<DD><I> Checks if there is a user registered in the database with given username and password.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="User.html">User</A>* <B><A HREF="#DOC.8.3">getUser</A></B>(std::string userName)
+<DD><I> Creates and returns a new User object, which is initialized to the information found in the database for given username.</I>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Class Database
+This class accesses the file "databasedat", which
+contains all the information from every user registered for 
+this ChatServer.
+There are methods for accessing and modifying the file
+"database.dat", in this class.</BLOCKQUOTE>
+<DL>
+
+<A NAME="Database"></A>
+<A NAME="DOC.8.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Database()</B></TT>
+<DD>Constructor, creater a new Database object that
+reads and modifies file "databasedat"
+<DL><DT><DD></DL><P>
+<A NAME="checkUser"></A>
+<A NAME="DOC.8.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool checkUser(std::string userName, std::string userPasswd)</B></TT>
+<DD>
+Checks if there is a user registered in the database
+with given username and password.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>userName</B> -  Username to check.
+<BR><B>userPasswd</B> -  <!1><A HREF="User.html">User</A> password to check.<BR><DT><B>Returns:</B><DD>  boolean Returns boolean true if given username and
+password match.
+<BR><DD></DL><P>
+<A NAME="getUser"></A>
+<A NAME="DOC.8.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="User.html">User</A>* getUser(std::string userName)</B></TT>
+<DD>
+Creates and returns a new User object, which is initialized
+to the information found in the database for given username.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>userName</B> -  Username whose information is used.<BR><DT><B>Returns:</B><DD>  User* Pointer to the created User object.
+<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

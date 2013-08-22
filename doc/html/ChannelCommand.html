@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  ChannelCommand</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">ChannelCommand</A></H2></H2><BLOCKQUOTE>Class ChannelCommand This class represents a command that is used to control the channels.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="CCommand,MCommand.html,CChannelCommand,MChannelCommand.html">
+<param name=before value="M,M">
+<param name=after value="Md_,M">
+<param name=indent value="0,1">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3">ChannelCommand</A></B>(std::string s, eChannelCom c, std::string tUser, std::string ch)
+<DD><I>Constructor, creates a new ServerCommand object, calls the parent constructor to set the sender.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>std::string <B><A HREF="#DOC.1.4">getTargetUser</A></B>()
+<DD><I>Returns the username of the target user for this command.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>std::string <B><A HREF="#DOC.1.5">getChannel</A></B>()
+<DD><I>Returns the channel to which this command is targeted.</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Public Members</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1">a public enum, specifying the different command</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.2">A public const member variable holding</A></B>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="Command.html">Command</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Fields</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>const std::string <B>sender</B>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Class ChannelCommand
+This class represents a command that is used to
+control the channels. There is a method in channels
+to receive ChannelCommand objects.</BLOCKQUOTE>
+<DL>
+
+<A NAME="a public enum, specifying the different command"></A>
+<A NAME="DOC.1.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> a public enum, specifying the different command</B></TT>
+<DD>a public enum, specifying the different command
+<DL><DT><DD></DL><P>
+<A NAME="A public const member variable holding"></A>
+<A NAME="DOC.1.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> A public const member variable holding</B></TT>
+<DD>A public const member variable holding
+<DL><DT><DD></DL><P>
+<A NAME="ChannelCommand"></A>
+<A NAME="DOC.1.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ChannelCommand(std::string s, eChannelCom c, std::string tUser, std::string ch)</B></TT>
+<DD>Constructor, creates a new ServerCommand object,
+calls the parent constructor to set the sender.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>s</B> -  Name of the <!1><A HREF="Command.html#DOC.5.2">sender</A> of the command
+<BR><B>com</B> -  An enum that specifies the command.
+<BR><B>tUser</B> -  Name of the user the action is meant for
+<BR><B></B> - <!1><A HREF="ServerCommand.html#DOC.13.7">userData</A> Contains user data, for example when adding
+a user it contains the password<BR><DD></DL><P>
+<A NAME="getTargetUser"></A>
+<A NAME="DOC.1.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>std::string getTargetUser()</B></TT>
+<DD>Returns the username of the target user for this
+command.
+
+<DL><DT><DT><B>Returns:</B><DD>  std::string Username of the target user.<BR><DD></DL><P>
+<A NAME="getChannel"></A>
+<A NAME="DOC.1.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>std::string getChannel()</B></TT>
+<DD>Returns the channel to which this command
+is targeted.
+
+<DL><DT><DT><B>Returns:</B><DD>  std::string<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

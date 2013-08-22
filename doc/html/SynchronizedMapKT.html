@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>template<class K, class T> class  SynchronizedMap&lt;K, T*&gt;</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>template&lt;class K, class T&gt; class  <A HREF="#DOC.DOCU">SynchronizedMap<K, T*></A></H2></H2><HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.16.1">SynchronizedMap</A></B>()
+<DD><I>Constructor</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.16.2">~SynchronizedMap</A></B>()
+<DD><I>Destructor.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.16.3">insert</A></B>(K key, T* obj)
+<DD><I>Inserts the obj under the Key key.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>T* <B><A HREF="#DOC.16.4">acquire</A></B>(K key)
+<DD><I>Returns the object specified by the key otherwise returns 0.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.16.5">release</A></B>(T* obj)
+<DD><I>Tells the map that this object is no longer used.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>bool <B><A HREF="#DOC.16.6">remove</A></B>(K key)
+<DD><I>Removes the obj from the map Synchronized </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.16.7">size</A></B>()
+<DD><I>Amount of objects stored.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ActiveList::iterator <B><A HREF="#DOC.16.8">getIterator</A></B>()
+<DD><I>Gets an iterator pointing to the begin of the map.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.16.9">returnIterator</A></B>()
+<DD><I>Tells the SynchronizedMap that you have stopped to use the iterator</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ActiveList::iterator <B><A HREF="#DOC.16.10">end</A></B>()
+<DD><I>Gets an iterator to the end of the map.</I>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<DL>
+
+<A NAME="SynchronizedMap"></A>
+<A NAME="DOC.16.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> SynchronizedMap()</B></TT>
+<DD>Constructor
+<DL><DT><DD></DL><P>
+<A NAME="~SynchronizedMap"></A>
+<A NAME="DOC.16.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ~SynchronizedMap()</B></TT>
+<DD>Destructor. Frees all pointers and lock.
+<DL><DT><DD></DL><P>
+<A NAME="insert"></A>
+<A NAME="DOC.16.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool insert(K key, T* obj)</B></TT>
+<DD>Inserts the obj under the Key key.
+Synchronized.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>key</B> -  Under which key to <!1><A HREF="SynchronizedMapKT.html#DOC.16.3">insert</A>
+<BR><B>obj</B> -  What to <!1><A HREF="SynchronizedMapKT.html#DOC.16.3">insert</A>, has to be subtype of <!1><A HREF="SynchronizedObject.html">SynchronizedObject</A>
+<BR><DT><B>Returns:</B><DD>  bool Was the insertion successful<BR><DD></DL><P>
+<A NAME="acquire"></A>
+<A NAME="DOC.16.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>T* acquire(K key)</B></TT>
+<DD>Returns the object specified by the key otherwise returns 0.
+Synchronized
+
+<DL><DT><DT><B>Parameters:</B><DD><B>key</B> -  Iden
+<BR><DT><B>Returns:</B><DD>  T Object from map<BR><DD></DL><P>
+<A NAME="release"></A>
+<A NAME="DOC.16.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool release(T* obj)</B></TT>
+<DD>Tells the map that this object is no longer used.
+Synchronized
+<IMG BORDER=0 SRC=g000001.gif>return bool Was release successful
+<DL><DT><DD></DL><P>
+<A NAME="remove"></A>
+<A NAME="DOC.16.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool remove(K key)</B></TT>
+<DD>Removes the obj from the map
+Synchronized
+
+<DL><DT><DT><B>Parameters:</B><DD><B>key</B> -  Key for object to <!1><A HREF="SynchronizedMapKT.html#DOC.16.6">remove</A>
+<BR><DT><B>Returns:</B><DD>  bool Was an object for this key found and was it successful<BR><DD></DL><P>
+<A NAME="size"></A>
+<A NAME="DOC.16.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int size()</B></TT>
+<DD>Amount of objects stored.
+Not synchronized
+
+<DL><DT><DT><B>Returns:</B><DD>  int <BR><DD></DL><P>
+<A NAME="getIterator"></A>
+<A NAME="DOC.16.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ActiveList::iterator getIterator()</B></TT>
+<DD>Gets an iterator pointing to the begin of the map.
+Locks all other methods till returnIterator() gets called.
+getIterator() should only be used to traversing the objects in the map.
+
+<DL><DT><DT><B>Returns:</B><DD>  ActiveList::iterator <BR><DD></DL><P>
+<A NAME="returnIterator"></A>
+<A NAME="DOC.16.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void returnIterator()</B></TT>
+<DD>Tells the SynchronizedMap that you have stopped to use the
+iterator
+<DL><DT><DD></DL><P>
+<A NAME="end"></A>
+<A NAME="DOC.16.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ActiveList::iterator end()</B></TT>
+<DD>Gets an iterator to the end of the map.
+
+<DL><DT><DT><B>Returns:</B><DD>  ActiveList::iterator<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>
